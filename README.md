@@ -18,7 +18,7 @@ docker-compose --version
 
 ### Pull the Image from Docker Hub
 ```bash
-docker pull acesus/psusphere:latest
+docker pull acesus/psusphere:v4
 ```
 
 ### Run the Container
@@ -29,7 +29,7 @@ docker run -d \
   -e USE_SQLITE=true \
   -e DJANGO_ALLOWED_HOSTS="localhost 127.0.0.1 [::1]" \
   --name psusphere \
-  acesus/psusphere:latest
+  acesus/psusphere:v4
 ```
 
 ### Access the Application
@@ -79,7 +79,7 @@ Edit your project files locally as needed.
 
 ### 2. Build New Image Locally
 ```bash
-docker build -t acesus/psusphere:latest .
+docker build -t acesus/psusphere:v4 .
 ```
 
 ### 3. Test Locally
@@ -88,7 +88,7 @@ docker-compose up
 ```
 or
 ```bash
-docker run -p 8000:8000 acesus/psusphere:latest
+docker run -p 8000:8000 acesus/psusphere:v4
 ```
 
 ### 4. Login to Docker Hub
@@ -99,7 +99,7 @@ Enter your Docker Hub username and password.
 
 ### 5. Push New Image to Docker Hub
 ```bash
-docker push acesus/psusphere:latest
+docker push acesus/psusphere:v4
 ```
 
 ### 6. Tag Versions (Optional but Recommended)
@@ -187,7 +187,7 @@ docker container prune
 
 | Task | Command |
 |------|---------|
-| Pull image | `docker pull acesus/psusphere:latest` |
+| Pull image | `docker pull acesus/psusphere:v4` |
 | Build image | `docker build -t acesus/psusphere:latest .` |
 | Run container | `docker run -p 8000:8000 acesus/psusphere:latest` |
 | Push image | `docker push acesus/psusphere:latest` |
